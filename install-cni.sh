@@ -20,7 +20,7 @@ CNI_OLD_NAME="${CNI_OLD_NAME:-10-flannel.conf}"
 if [ "${CNI_CONF_NAME}" != "${CNI_OLD_NAME}" ]; then
     rm -f "/host/etc/cni/net.d/${CNI_OLD_NAME}"
 fi
-mv $TMP_CONF /host/etc/cni/net.d/${CNI_CONF_NAME}
+cat $TMP_CONF > /host/etc/cni/net.d/${CNI_CONF_NAME}
 echo "Wrote CNI config: $(cat /host/etc/cni/net.d/${CNI_CONF_NAME})"
 
 while :; do sleep 3600; done;
