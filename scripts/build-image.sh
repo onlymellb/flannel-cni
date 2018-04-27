@@ -3,7 +3,7 @@ set -e
 CURL="curl -sSf"
 FLANNEL_CNI_ROOT=$(git rev-parse --show-toplevel)
 IMAGE_NAME=uhub.ucloud.cn/pingcap/flannel-cni
-VERSION=$($FLANNEL_CNI_ROOT/scripts/git-version)
+VERSION=v0.3.0
 CNI_VERSION="v0.6.0"
 
 mkdir -p dist
