@@ -1,7 +1,6 @@
 *Example for deploying flannel daemonset:*
 
 flannel-configmap:
-
 ```yaml
 apiVersion: v1
 kind: ConfigMap
